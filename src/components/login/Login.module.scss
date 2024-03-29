@@ -1,0 +1,119 @@
+$form-bg-color: rgb(47, 94, 93);
+$color-light-blue: aqua;
+$color-dark-blue: rgb(18, 129, 129);
+$color-light-blue-hover: rgb(65, 229, 229);
+.login {
+	background: linear-gradient($form-bg-color, #eee);
+	width: 100%;
+	height: 100vh;
+	.form {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 100;
+		padding: 30px;
+		background-color: $form-bg-color;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		border-radius: 8px;
+		transition: 0.5s;
+		h2 {
+			color: $color-light-blue;
+		}
+
+		:where(input, button) {
+			width: 300px;
+			height: 35px;
+			border-radius: 8px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		input {
+			border: 2px solid $color-light-blue;
+			text-indent: 10px;
+			color: $color-dark-blue;
+		}
+
+		button {
+			height: 40px !important;
+		}
+
+		.input {
+			position: relative;
+
+			span {
+				font-size: 14px;
+				position: absolute;
+				top: -20px;
+				color: $color-light-blue;
+			}
+
+			p {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				gap: 10px;
+				font-size: 12px;
+				color: rgb(231, 58, 58);
+				padding: 10px 0 0;
+			}
+
+			&:nth-child(2) {
+				position: relative;
+			}
+		}
+
+		.show_btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px !important;
+			height: 35px !important;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			color: $color-dark-blue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+		}
+
+		.dark {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 50;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.35);
+			cursor: pointer;
+			transition: 0.5s;
+		}
+		.btn_full {
+			background-color: $color-light-blue;
+			color: $color-dark-blue;
+			font-size: 18px;
+			border: none;
+		}
+	}
+
+	@media (max-width: 440px) {
+		.form :where(input, button) {
+			width: 250px;
+		}
+	}
+
+	@media (max-width: 340px) {
+		.form :where(input, button) {
+			width: 220px;
+		}
+	}
+}
