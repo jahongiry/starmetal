@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+.dashboard {
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	.card {
+		width: 400px;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 30px;
+		border: 2px solid $color-dark-blue;
+		border-radius: 8px;
+		cursor: pointer;
+		transition: 0.3s;
+		user-select: none;
+		&:hover {
+			scale: 1.05;
+			translate: 0 -15px;
+		}
+		> p {
+			color: $color-dark-blue;
+		}
+		> svg {
+			color: $color-dark-blue;
+		}
+	}
+
+	@media (max-width: 710px) {
+		flex-direction: column;
+		padding: 20px 0 !important;
+	}
+	@media (max-width: 480px) {
+		.card {
+			width: 350px;
+		}
+	}
+	@media (max-width: 400px) {
+		.card {
+			width: 280px;
+		}
+	}
+}

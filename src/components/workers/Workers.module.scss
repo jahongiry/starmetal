@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+
+.workers {
+	padding: 20px 0 !important;
+}
+input {
+	width: 100%;
+	max-width: 300px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input:focus {
+	outline: none;
+	border-color: $color-light-blue; /* Example focus color */
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px !important;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: $color-dark-blue;
+	color: #fff;
+	font-weight: bold;
+}
+tr {
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+tr:nth-child(even) {
+	background: linear-gradient(-120deg, $color-dark-blue, $color-light-blue);
+	color: #fff;
+}
+
+tr:hover {
+	background-color: #e3f1f2;
+}
+
+@media (max-width: 768px) {
+	th,
+	td {
+		padding: 6px;
+	}
+}

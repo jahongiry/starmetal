@@ -16,7 +16,7 @@ const Login = () => {
 
 	const onSubmit = async data => {
 		try {
-			reset({ phoneNumber: '', password: '' })
+			reset({ username: '', password: '' })
 			console.log(data)
 		} catch (error) {
 			console.error('Error submitting login form:', error)
@@ -24,7 +24,7 @@ const Login = () => {
 	}
 
 	// const onSubmit = async data => {
-	// 	reset({ phoneNumber: '', password: '' })
+	// 	reset({ username: '', password: '' })
 	// }
 
 	return (
@@ -35,13 +35,13 @@ const Login = () => {
 					<span>Foydalanuvchi nomizni kiriting</span>
 					<input
 						type='text'
-						{...register('phoneNumber', {
+						{...register('username', {
 							required: 'Foydalanuvchi nomi  kirtish shart',
 						})}
 					/>
 					<p>
-						{errors.phoneNumber ? <TiWarningOutline /> : <></>}
-						{errors.phoneNumber?.message}
+						{errors.username ? <TiWarningOutline /> : <></>}
+						{errors.username?.message}
 					</p>
 				</div>
 				<div className={styles.input}>
