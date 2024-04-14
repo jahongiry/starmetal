@@ -1,0 +1,154 @@
+@import '../../variables.scss';
+
+.workers {
+	padding: 20px 20px !important;
+	button {
+		width: 200px;
+		padding: 7px 0;
+		background-color: transparent;
+		border: 2px solid $color-dark-blue;
+		border-radius: 8px;
+		color: $color-dark-blue;
+		margin-left: 20px;
+	}
+}
+input {
+	width: 100%;
+	max-width: 300px;
+	padding: 8px;
+	border: 1px solid $color-dark-blue !important;
+	border-radius: 5px;
+}
+
+input:focus {
+	outline: none;
+	border-color: $color-light-blue;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px !important;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: left;
+}
+.course {
+	text-align: center;
+	p {
+		text-align: center;
+		margin-top: 5px;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
+	}
+}
+
+th {
+	background-color: $color-dark-blue;
+	color: #fff;
+	font-weight: bold;
+}
+tr {
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+tr:nth-child(even) {
+	background: linear-gradient(-120deg, $color-dark-blue, $color-light-blue);
+	color: #fff;
+}
+
+tr:hover {
+	background-color: #e3f1f2;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	.addClient {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 10;
+		translate: -50% -50%;
+		width: 450px;
+		height: 400px;
+		background-color: #eee;
+		padding: 100px 20px 20px;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 20px;
+		h2 {
+			color: $color-light-blue;
+		}
+		input {
+			border: 1px solid $color-light-blue;
+			color: $color-dark-blue;
+			&::placeholder {
+				color: $color-dark-blue;
+			}
+		}
+		button {
+			width: 73%;
+			padding: 7px 0;
+			border: 2px solid $color-dark-blue;
+			border-radius: 8px;
+			margin-top: 10px;
+			margin-left: 0;
+			color: $color-light-blue;
+			font-size: 15px;
+			transition: 0.3s ease-in-out;
+			&:hover {
+				background-color: $color-light-blue;
+				color: #eee;
+				border-color: $color-light-blue;
+			}
+		}
+	}
+	.dark {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100dvh;
+		background-color: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(1px);
+		cursor: pointer;
+	}
+	@media (max-width: 650px) {
+		.addClient {
+			width: 350px;
+		}
+	}
+
+	@media (max-width: 400px) {
+		.addClient {
+			width: 300px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	th,
+	td {
+		padding: 6px;
+	}
+}
+@media (max-width: 560px) {
+	.add_btn {
+		margin-top: 20px;
+		margin-left: 0 !important;
+		max-width: 300px !important;
+		width: 100% !important;
+	}
+}

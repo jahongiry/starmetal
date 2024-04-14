@@ -1,0 +1,18 @@
+.css-blx94t-MuiButtonBase-root-MuiPickersDay-root {
+	transition: 0.5s ease-in-out;
+}
+.css-blx94t-MuiButtonBase-root-MuiPickersDay-root:focus {
+	background-color: #00ffff !important;
+}
+.css-cyfsxc-MuiPickersCalendarHeader-labelContainer {
+	color: #00ffff;
+}
+.css-i6qav6-MuiPickersYear-yearButton.Mui-selected:focus {
+	background-color: #00ffff;
+}
+.css-1tkx1wf-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
+	color: #00ffff;
+}
+.MuiIconButton-root {
+	color: #00ffff !important;
+}

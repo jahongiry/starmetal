@@ -15,7 +15,7 @@ const Dashboard = () => {
 				<p>Klient</p>
 				<FaRegUserCircle />
 			</div>
-			<div className={styles.card}>
+			<div className={styles.card} onClick={() => navigate('/consumption')}>
 				<p>Rasxodlar</p>
 				<AiOutlineDollarCircle />
 			</div>

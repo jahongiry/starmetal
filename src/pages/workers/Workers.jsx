@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Workers.module.scss'
 const data = [
 	{
@@ -463,11 +464,17 @@ const Workers = () => {
 	// 		.then(res => setData(res.data))
 	// 		.catch(err => console.log(err))
 	// }, [])
+
 	const filteredData = data.filter(
 		el =>
 			el.fullName.toLowerCase().includes(search.toLowerCase()) ||
 			el.phoneNumber.toLowerCase().includes(search.toLowerCase())
 	)
+	const navigate = useNavigate()
+	const handleClikc = id => {
+		setId(id)
+		navigate(`/worker/${id}`)
+	}
 	return (
 		<div className={`${styles.workers} container`}>
 			<input
@@ -489,7 +496,7 @@ const Workers = () => {
 					</thead>
 					<tbody>
 						{filteredData.map(el => (
-							<tr key={el.id} onClick={() => setId(el.id)}>
+							<tr key={el.id} onClick={() => handleClikc(el.id)}>
 								<td>{el.fullName}</td>
 								<td>{el.phoneNumber}</td>
 								<td>{el.price}</td>
